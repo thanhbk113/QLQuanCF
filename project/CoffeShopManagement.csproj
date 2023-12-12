@@ -117,6 +117,12 @@
     <Compile Include="frmAdTables.Designer.cs">
       <DependentUpon>frmAdTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTableReHis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableReHis.Designer.cs">
+      <DependentUpon>frmTableReHis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdTables.resx">
       <DependentUpon>frmAdTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableReHis.resx">
+      <DependentUpon>frmTableReHis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

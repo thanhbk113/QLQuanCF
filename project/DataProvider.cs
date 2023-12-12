@@ -482,7 +482,36 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        // Phương thức để đặt bàn
+        public void BookTable(string tableName, string totalMoney, DateTime bookingTime)
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_book_table";
+            command.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = tableName;
+            command.Parameters.AddWithValue("@TotalAmount", SqlDbType.NVarChar).Value = totalMoney;
+            command.Parameters.AddWithValue("@BookingTime", SqlDbType.DateTime).Value = bookingTime;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        // Phương thức để tải lịch sử đặt bàn
+        public DataTable LoadBookingHistory()
+        {
+            DataTable data = new DataTable();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_load_booking_history";
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
+            return data;
+        }
+
     }
-      
+
 }
         

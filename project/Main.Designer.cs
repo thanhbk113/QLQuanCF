@@ -45,6 +45,7 @@
             this.tmiTable = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.lịchSửĐặtBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gpbTable = new System.Windows.Forms.GroupBox();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.gpbBill = new System.Windows.Forms.GroupBox();
@@ -200,7 +201,8 @@
             this.toolStripSeparator11,
             this.tmiTable,
             this.toolStripSeparator12,
-            this.tmiAccount});
+            this.tmiAccount,
+            this.lịchSửĐặtBànToolStripMenuItem});
             this.tmiAdmin.Name = "tmiAdmin";
             this.tmiAdmin.Size = new System.Drawing.Size(76, 24);
             this.tmiAdmin.Text = "Quản trị";
@@ -252,6 +254,14 @@
             this.tmiAccount.Size = new System.Drawing.Size(277, 26);
             this.tmiAccount.Text = "Danh sách tài khoản";
             this.tmiAccount.Click += new System.EventHandler(this.tmiAccount_Click);
+            // 
+            // lịchSửĐặtBànToolStripMenuItem
+            // 
+            this.lịchSửĐặtBànToolStripMenuItem.Name = "lịchSửĐặtBànToolStripMenuItem";
+            this.lịchSửĐặtBànToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.lịchSửĐặtBànToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
+            this.lịchSửĐặtBànToolStripMenuItem.Text = "Lịch sử đặt bàn";
+            this.lịchSửĐặtBànToolStripMenuItem.Click += new System.EventHandler(this.lịchSửĐặtBànToolStripMenuItem_Click);
             // 
             // gpbTable
             // 
@@ -1044,6 +1054,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ToolStripMenuItem lịchSửĐặtBànToolStripMenuItem;
 
         public System.Windows.Forms.MouseEventHandler txtNameMan_MouseClick { get; set; }
     }

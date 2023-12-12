@@ -72,9 +72,11 @@ namespace project
             if (ms == DialogResult.Yes)
             {
                 //Tih tien
+                DataProvider provider = new DataProvider();
                 setTableNull();
                 deleteBill();
                 MessageBox.Show("Đã thanh toán " + txtNameTable.Text, "Xong",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                provider.BookTable(txtNameTable.Text, txtTotal.Text,DateTime.Now);
                 this.Close();
             }
             else if (ms == DialogResult.No)
