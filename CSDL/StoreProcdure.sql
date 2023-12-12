@@ -313,7 +313,6 @@ BEGIN
 END
 GO
 
-
 CREATE PROCEDURE sp_reset_account
 @NAME nvarchar(100)
 ,@PASS nvarchar(100)
@@ -323,3 +322,20 @@ BEGIN
 	UPDATE ACCOUNT SET DISPLAYNAME = @DISPLAYNAME, PASSWORD = @PASS WHERE USERNAME = @NAME;
 END
 GO
+
+/*table-reservation-history*/
+CREATE PROCEDURE sp_book_table
+@TableName nvarchar(100),
+@BookingTime datetime,
+@TotalAmount nvarchar(50)
+AS
+BEGIN
+	INSERT INTO BOOKINGHISTORY (TableName, BookingTime, TotalAmount) VALUES (@TableName, @BookingTime, @TotalAmount)
+END
+
+
+CREATE PROCEDURE sp_load_booking_history
+AS
+BEGIN
+	SELECT * FROM BOOKINGHISTORY
+END

@@ -634,6 +634,13 @@ namespace project
 
         }
 
+        private void lịchSửĐặtBànToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTableReHis frmTableReHis = new frmTableReHis();
+            frmTableReHis.ShowDialog();
+            this.Show();
+        }
+
         //Dong mo danh sach nhac
         private void btnMedia_Click(object sender, EventArgs e)
         {
