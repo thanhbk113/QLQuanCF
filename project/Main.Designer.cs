@@ -702,7 +702,7 @@
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(231, 32);
             this.txtAdress.TabIndex = 14;
-            this.txtAdress.Text = "Đ.Trần Văn Ơn, P.Phú Hòa, TP.Thủ Dầu Một\r\n                  0336978061 (Anh Huy)";
+            this.txtAdress.Text = "Quận 12, TP.HCM";
             this.txtAdress.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // datetime
@@ -929,7 +929,7 @@
             this.txtNameMan.Name = "txtNameMan";
             this.txtNameMan.Size = new System.Drawing.Size(192, 52);
             this.txtNameMan.TabIndex = 15;
-            this.txtNameMan.Text = "THT COFFE";
+            this.txtNameMan.Text = "TNT COFFE";
             this.txtNameMan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
