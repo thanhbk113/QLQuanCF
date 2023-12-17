@@ -46,6 +46,7 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửĐặtBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBill = new System.Windows.Forms.ToolStripMenuItem();
             this.gpbTable = new System.Windows.Forms.GroupBox();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.gpbBill = new System.Windows.Forms.GroupBox();
@@ -202,7 +203,8 @@
             this.tmiTable,
             this.toolStripSeparator12,
             this.tmiAccount,
-            this.lịchSửĐặtBànToolStripMenuItem});
+            this.lịchSửĐặtBànToolStripMenuItem,
+            this.listBill});
             this.tmiAdmin.Name = "tmiAdmin";
             this.tmiAdmin.Size = new System.Drawing.Size(76, 24);
             this.tmiAdmin.Text = "Quản trị";
@@ -262,6 +264,14 @@
             this.lịchSửĐặtBànToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.lịchSửĐặtBànToolStripMenuItem.Text = "Lịch sử đặt bàn";
             this.lịchSửĐặtBànToolStripMenuItem.Click += new System.EventHandler(this.lịchSửĐặtBànToolStripMenuItem_Click);
+            // 
+            // listBill
+            // 
+            this.listBill.Name = "listBill";
+            this.listBill.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.listBill.Size = new System.Drawing.Size(277, 26);
+            this.listBill.Text = "Danh sách hóa đơn";
+            this.listBill.Click += new System.EventHandler(this.listBill_Click);
             // 
             // gpbTable
             // 
@@ -692,7 +702,7 @@
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(231, 32);
             this.txtAdress.TabIndex = 14;
-            this.txtAdress.Text = "Đ.Trần Văn Ơn, P.Phú Hòa, TP.Thủ Dầu Một\r\n                  0336978061 (Anh Huy)";
+            this.txtAdress.Text = "Quận 12, TP.HCM";
             this.txtAdress.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // datetime
@@ -919,7 +929,7 @@
             this.txtNameMan.Name = "txtNameMan";
             this.txtNameMan.Size = new System.Drawing.Size(192, 52);
             this.txtNameMan.TabIndex = 15;
-            this.txtNameMan.Text = "THT COFFE";
+            this.txtNameMan.Text = "TNT COFFE";
             this.txtNameMan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
@@ -1055,6 +1065,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStripMenuItem lịchSửĐặtBànToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listBill;
 
         public System.Windows.Forms.MouseEventHandler txtNameMan_MouseClick { get; set; }
     }

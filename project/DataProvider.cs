@@ -11,11 +11,15 @@ namespace project
     public class DataProvider
     {
 
+        //SqlConnection connection=null;// = new SqlConnection(); //nhon
         SqlConnection connection = new SqlConnection();
+
         public DataProvider()
         {
             try
             {
+                //connection.ConnectionString = @"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";nhon
+                //connection = new SqlConnection(@"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True");nhon
                 connection.ConnectionString = @"Data Source=DESKTOP-60UEF3K\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
                 connection.Open();
             }
@@ -58,17 +62,17 @@ namespace project
             connection.Close();
             return data;
         }
-        
+
         public DataTable loadCategory()
         {
             DataTable data = new DataTable();
-                SqlCommand command = new SqlCommand();
-                command.Connection = connection;
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "sp_load_category";
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_load_category";
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
             return data;
         }
         public DataTable loadAllFood()
@@ -87,27 +91,27 @@ namespace project
         {
             DataTable data = new DataTable();
             SqlCommand command = new SqlCommand();
-                command.Connection = connection;
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "sp_load_food";
-                command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = nameC;
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_load_food";
+            command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = nameC;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
             return data;
         }
 
         public DataTable loadTableFoodBill(string nameT)
         {
             DataTable data = new DataTable();
-             SqlCommand command = new SqlCommand();
-                command.Connection = connection;
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "sp_table_food_bill";
-                command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = nameT;
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_table_food_bill";
+            command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = nameT;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
             return data;
         }
 
@@ -115,28 +119,28 @@ namespace project
         public void Datban(string stt, string nameT)
         {
             SqlCommand command = new SqlCommand();
-                command.Connection = connection;
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "sp_datban";
-                command.Parameters.AddWithValue("@STT", SqlDbType.NVarChar).Value = stt;
-                command.Parameters.AddWithValue("@NAMETable", SqlDbType.NVarChar).Value = nameT;
-                command.ExecuteNonQuery();
-                connection.Close();
-        }
-        
-        public void AddAccount(string USERNAME, string DISPLAYNAME, string PASSWORD, string TYPEACCOUNT)
-        {
-                SqlCommand command = new SqlCommand("sp_Add_Account",connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@USERNAME", SqlDbType.NVarChar).Value = USERNAME;
-                command.Parameters.AddWithValue("@DISPLAYNAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
-                command.Parameters.AddWithValue("@PASSWORD", SqlDbType.NVarChar).Value = PASSWORD;
-                command.Parameters.AddWithValue("@TYPEACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
-                command.ExecuteNonQuery();
-                connection.Close();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_datban";
+            command.Parameters.AddWithValue("@STT", SqlDbType.NVarChar).Value = stt;
+            command.Parameters.AddWithValue("@NAMETable", SqlDbType.NVarChar).Value = nameT;
+            command.ExecuteNonQuery();
+            connection.Close();
         }
 
-        
+        public void AddAccount(string USERNAME, string DISPLAYNAME, string PASSWORD, string TYPEACCOUNT)
+        {
+            SqlCommand command = new SqlCommand("sp_Add_Account", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@USERNAME", SqlDbType.NVarChar).Value = USERNAME;
+            command.Parameters.AddWithValue("@DISPLAYNAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
+            command.Parameters.AddWithValue("@PASSWORD", SqlDbType.NVarChar).Value = PASSWORD;
+            command.Parameters.AddWithValue("@TYPEACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
         public void DelAccount(string USERNAME)
         {
             SqlCommand command = new SqlCommand();
@@ -147,7 +151,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void UpdateAccount(string USERNAME, string DISPLAYNAME, string PASSWORD, string TYPEACCOUNT,string Where)
+        public void UpdateAccount(string USERNAME, string DISPLAYNAME, string PASSWORD, string TYPEACCOUNT, string Where)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -183,7 +187,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void UpdateFood(string NAMECATEGORY, string NAME, float PRICE,string where)
+        public void UpdateFood(string NAMECATEGORY, string NAME, float PRICE, string where)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -217,7 +221,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void UpdateTable(string NAME,string where)
+        public void UpdateTable(string NAME, string where)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -249,7 +253,7 @@ namespace project
         }
 
 
-        public void move_food(string NAMETABLE,string NAMEFOOD,int COUNTS)
+        public void move_food(string NAMETABLE, string NAMEFOOD, int COUNTS)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -261,7 +265,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void move_table(float TOTAL, string NAMET,string NAMEF)
+        public void move_table(float TOTAL, string NAMET, string NAMEF)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -308,7 +312,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void UpdateCate(string NAMEC,string Where)
+        public void UpdateCate(string NAMEC, string Where)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -405,7 +409,7 @@ namespace project
             command.ExecuteNonQuery();
             connection.Close();
         }
-        public void ThemMon(string NAME,string NAMEFood, int count)
+        public void ThemMon(string NAME, string NAMEFood, int count)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
@@ -497,7 +501,7 @@ namespace project
             connection.Close();
         }
 
-        // Phương thức để tải lịch sử đặt bàn
+        // Phương thức để tải lịch sử đặt bàn+
         public DataTable LoadBookingHistory()
         {
             DataTable data = new DataTable();
@@ -510,8 +514,34 @@ namespace project
             connection.Close();
             return data;
         }
+        public void SaveBill(string name, int count, string price, DateTime time)
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_save_bill";
+            command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
+            command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
+            command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;
+            command.Parameters.AddWithValue("@TimePay", SqlDbType.DateTime).Value = time;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public DataTable LoadBill()
+        {
+            DataTable data = new DataTable();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_loaded_bill";
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
+            return data;
+        }
 
     }
 
 }
-        
+

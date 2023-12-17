@@ -641,6 +641,14 @@ namespace project
             this.Show();
         }
 
+        private void listBill_Click(object sender, EventArgs e)
+        {
+            frmBillManager frmBillManager = new frmBillManager();
+            frmBillManager.ShowDialog();
+            this.Show();
+        }
+
+
         //Dong mo danh sach nhac
         private void btnMedia_Click(object sender, EventArgs e)
         {
