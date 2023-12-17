@@ -493,7 +493,7 @@ namespace project
             command.CommandText = "sp_book_table";
             command.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = tableName;
             command.Parameters.AddWithValue("@TotalAmount", SqlDbType.NVarChar).Value = totalMoney;
-            //command.Parameters.AddWithValue("@BookingTime", SqlDbType.DateTime).Value = bookingTime;
+            command.Parameters.AddWithValue("@BookingTime", SqlDbType.DateTime).Value = bookingTime;
             command.ExecuteNonQuery();
             connection.Close();
         }
