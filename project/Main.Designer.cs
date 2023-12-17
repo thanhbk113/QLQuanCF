@@ -140,7 +140,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1199, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1199, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -153,7 +153,7 @@
             this.toolStripSeparator4,
             this.tmiLogout});
             this.tmiAcount.Name = "tmiAcount";
-            this.tmiAcount.Size = new System.Drawing.Size(69, 20);
+            this.tmiAcount.Size = new System.Drawing.Size(85, 24);
             this.tmiAcount.Text = "Tài khoản";
             // 
             // tmiChange
@@ -161,35 +161,35 @@
             this.tmiChange.Name = "tmiChange";
             this.tmiChange.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.tmiChange.Size = new System.Drawing.Size(245, 22);
+            this.tmiChange.Size = new System.Drawing.Size(304, 26);
             this.tmiChange.Text = "Thay đổi thông tin";
             this.tmiChange.Click += new System.EventHandler(this.tmiChange_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(242, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(301, 6);
             // 
             // tmiSleep
             // 
             this.tmiSleep.Name = "tmiSleep";
             this.tmiSleep.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.tmiSleep.Size = new System.Drawing.Size(245, 22);
+            this.tmiSleep.Size = new System.Drawing.Size(304, 26);
             this.tmiSleep.Text = "Đi ngủ";
             this.tmiSleep.Click += new System.EventHandler(this.btnBlock_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(242, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(301, 6);
             // 
             // tmiLogout
             // 
             this.tmiLogout.Name = "tmiLogout";
             this.tmiLogout.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.L)));
-            this.tmiLogout.Size = new System.Drawing.Size(245, 22);
+            this.tmiLogout.Size = new System.Drawing.Size(304, 26);
             this.tmiLogout.Text = "Đăng xuất";
             this.tmiLogout.Click += new System.EventHandler(this.tmiLogout_Click);
             // 
@@ -206,7 +206,7 @@
             this.lịchSửĐặtBànToolStripMenuItem,
             this.listBill});
             this.tmiAdmin.Name = "tmiAdmin";
-            this.tmiAdmin.Size = new System.Drawing.Size(62, 20);
+            this.tmiAdmin.Size = new System.Drawing.Size(76, 24);
             this.tmiAdmin.Text = "Quản trị";
             this.tmiAdmin.Visible = false;
             // 
@@ -214,46 +214,46 @@
             // 
             this.tmiCategory.Name = "tmiCategory";
             this.tmiCategory.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.tmiCategory.Size = new System.Drawing.Size(223, 22);
+            this.tmiCategory.Size = new System.Drawing.Size(277, 26);
             this.tmiCategory.Text = "Danh mục";
             this.tmiCategory.Click += new System.EventHandler(this.tmiCategory_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(274, 6);
             // 
             // tmiFood
             // 
             this.tmiFood.Name = "tmiFood";
             this.tmiFood.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.tmiFood.Size = new System.Drawing.Size(223, 22);
+            this.tmiFood.Size = new System.Drawing.Size(277, 26);
             this.tmiFood.Text = "Danh sách món";
             this.tmiFood.Click += new System.EventHandler(this.tmiFood_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(274, 6);
             // 
             // tmiTable
             // 
             this.tmiTable.Name = "tmiTable";
             this.tmiTable.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.tmiTable.Size = new System.Drawing.Size(223, 22);
+            this.tmiTable.Size = new System.Drawing.Size(277, 26);
             this.tmiTable.Text = "Danh sách bàn";
             this.tmiTable.Click += new System.EventHandler(this.tmiTable_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(220, 6);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(274, 6);
             // 
             // tmiAccount
             // 
             this.tmiAccount.Name = "tmiAccount";
             this.tmiAccount.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.tmiAccount.Size = new System.Drawing.Size(223, 22);
+            this.tmiAccount.Size = new System.Drawing.Size(277, 26);
             this.tmiAccount.Text = "Danh sách tài khoản";
             this.tmiAccount.Click += new System.EventHandler(this.tmiAccount_Click);
             // 
@@ -261,14 +261,15 @@
             // 
             this.lịchSửĐặtBànToolStripMenuItem.Name = "lịchSửĐặtBànToolStripMenuItem";
             this.lịchSửĐặtBànToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.lịchSửĐặtBànToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.lịchSửĐặtBànToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
             this.lịchSửĐặtBànToolStripMenuItem.Text = "Lịch sử đặt bàn";
             this.lịchSửĐặtBànToolStripMenuItem.Click += new System.EventHandler(this.lịchSửĐặtBànToolStripMenuItem_Click);
             // 
             // listBill
             // 
             this.listBill.Name = "listBill";
-            this.listBill.Size = new System.Drawing.Size(223, 22);
+            this.listBill.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.listBill.Size = new System.Drawing.Size(277, 26);
             this.listBill.Text = "Danh sách hóa đơn";
             this.listBill.Click += new System.EventHandler(this.listBill_Click);
             // 
@@ -370,7 +371,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(293, 299);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 18);
+            this.label6.Size = new System.Drawing.Size(48, 22);
             this.label6.TabIndex = 14;
             this.label6.Text = "VNĐ";
             // 
@@ -380,7 +381,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(34, 60);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(225, 18);
+            this.label5.Size = new System.Drawing.Size(276, 22);
             this.label5.TabIndex = 10;
             this.label5.Text = "STT             Món            Số lượng";
             // 
@@ -409,7 +410,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 298);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 18);
+            this.label1.Size = new System.Drawing.Size(106, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tổng cộng:";
             // 
@@ -474,7 +475,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(20, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 18);
+            this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Đơn giá:";
             // 
@@ -484,7 +485,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(241, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 18);
+            this.label3.Size = new System.Drawing.Size(48, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "VNĐ";
             // 
@@ -715,7 +716,7 @@
             this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datetime.Location = new System.Drawing.Point(199, 1);
             this.datetime.Name = "datetime";
-            this.datetime.Size = new System.Drawing.Size(170, 26);
+            this.datetime.Size = new System.Drawing.Size(170, 30);
             this.datetime.TabIndex = 13;
             // 
             // cmnSubTable
@@ -729,7 +730,7 @@
             this.tsmGopBan,
             this.tsmInTT});
             this.cmnSubTable.Name = "cmnSubTable";
-            this.cmnSubTable.Size = new System.Drawing.Size(158, 136);
+            this.cmnSubTable.Size = new System.Drawing.Size(180, 148);
             this.cmnSubTable.Text = "ONLINE";
             this.cmnSubTable.Opening += new System.ComponentModel.CancelEventHandler(this.cmnSubTable_Opening);
             // 
@@ -737,7 +738,7 @@
             // 
             this.tsmThemMon.Name = "tsmThemMon";
             this.tsmThemMon.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsmThemMon.Size = new System.Drawing.Size(157, 22);
+            this.tsmThemMon.Size = new System.Drawing.Size(179, 24);
             this.tsmThemMon.Text = "Thêm món";
             this.tsmThemMon.Click += new System.EventHandler(this.tsmThemMon_Click);
             // 
@@ -745,7 +746,7 @@
             // 
             this.tsmTraMon.Name = "tsmTraMon";
             this.tsmTraMon.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.tsmTraMon.Size = new System.Drawing.Size(157, 22);
+            this.tsmTraMon.Size = new System.Drawing.Size(179, 24);
             this.tsmTraMon.Text = "Trả món";
             this.tsmTraMon.Click += new System.EventHandler(this.tsmTraMon_Click);
             // 
@@ -753,7 +754,7 @@
             // 
             this.tsmThanhToan.Name = "tsmThanhToan";
             this.tsmThanhToan.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.tsmThanhToan.Size = new System.Drawing.Size(157, 22);
+            this.tsmThanhToan.Size = new System.Drawing.Size(179, 24);
             this.tsmThanhToan.Text = "Thanh toán";
             this.tsmThanhToan.Click += new System.EventHandler(this.tsmThanhToan_Click);
             // 
@@ -761,7 +762,7 @@
             // 
             this.tsmChuyenBan.Name = "tsmChuyenBan";
             this.tsmChuyenBan.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.tsmChuyenBan.Size = new System.Drawing.Size(157, 22);
+            this.tsmChuyenBan.Size = new System.Drawing.Size(179, 24);
             this.tsmChuyenBan.Text = "Chuyển bàn";
             this.tsmChuyenBan.Click += new System.EventHandler(this.tsmChuyenBan_Click);
             // 
@@ -769,7 +770,7 @@
             // 
             this.tsmGopBan.Name = "tsmGopBan";
             this.tsmGopBan.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.tsmGopBan.Size = new System.Drawing.Size(157, 22);
+            this.tsmGopBan.Size = new System.Drawing.Size(179, 24);
             this.tsmGopBan.Text = "Gộp bàn";
             this.tsmGopBan.Click += new System.EventHandler(this.tsmGopBan_Click);
             // 
@@ -777,7 +778,7 @@
             // 
             this.tsmInTT.Name = "tsmInTT";
             this.tsmInTT.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.tsmInTT.Size = new System.Drawing.Size(157, 22);
+            this.tsmInTT.Size = new System.Drawing.Size(179, 24);
             this.tsmInTT.Text = "In tạm tính";
             this.tsmInTT.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -788,7 +789,7 @@
             this.tmsThemMon2,
             this.tsmDatBan});
             this.cmnSubTable2.Name = "cmnSubTable";
-            this.cmnSubTable2.Size = new System.Drawing.Size(176, 48);
+            this.cmnSubTable2.Size = new System.Drawing.Size(204, 52);
             this.cmnSubTable2.Text = "TRONG";
             this.cmnSubTable2.Opening += new System.ComponentModel.CancelEventHandler(this.cmnSubTable2_Opening);
             // 
@@ -796,7 +797,7 @@
             // 
             this.tmsThemMon2.Name = "tmsThemMon2";
             this.tmsThemMon2.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tmsThemMon2.Size = new System.Drawing.Size(175, 22);
+            this.tmsThemMon2.Size = new System.Drawing.Size(203, 24);
             this.tmsThemMon2.Text = "Thêm món mới";
             this.tmsThemMon2.Click += new System.EventHandler(this.tmsThemMon2_Click);
             // 
@@ -804,7 +805,7 @@
             // 
             this.tsmDatBan.Name = "tsmDatBan";
             this.tsmDatBan.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.tsmDatBan.Size = new System.Drawing.Size(175, 22);
+            this.tsmDatBan.Size = new System.Drawing.Size(203, 24);
             this.tsmDatBan.Text = "Đặt giữ bàn";
             this.tsmDatBan.Click += new System.EventHandler(this.tsmDatBan_Click);
             // 
@@ -814,7 +815,7 @@
             this.cmnSubTable3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmMoBan});
             this.cmnSubTable3.Name = "cmnSubTable";
-            this.cmnSubTable3.Size = new System.Drawing.Size(170, 26);
+            this.cmnSubTable3.Size = new System.Drawing.Size(198, 28);
             this.cmnSubTable3.Text = "DATTRUOC";
             this.cmnSubTable3.Opening += new System.ComponentModel.CancelEventHandler(this.cmnSubTable3_Opening);
             // 
@@ -822,7 +823,7 @@
             // 
             this.tsmMoBan.Name = "tsmMoBan";
             this.tsmMoBan.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.tsmMoBan.Size = new System.Drawing.Size(169, 22);
+            this.tsmMoBan.Size = new System.Drawing.Size(197, 24);
             this.tsmMoBan.Text = "Mở khóa bàn";
             this.tsmMoBan.Click += new System.EventHandler(this.tsmMoBan_Click);
             // 
@@ -933,7 +934,7 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(1199, 598);
