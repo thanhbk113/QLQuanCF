@@ -18,7 +18,7 @@ namespace project
             DataProvider provider = new DataProvider();
             dataGridTableReHis.DataSource = provider.LoadBookingHistory();
 
-            // Đặt tên cho các header của DataGridView
+            //Đặt tên cho các header của DataGridView
             dataGridTableReHis.Columns[0].HeaderText = "STT";
             dataGridTableReHis.Columns[1].HeaderText = "Tên bàn";
             dataGridTableReHis.Columns[2].HeaderText = "Thời gian";

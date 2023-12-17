@@ -11,12 +11,13 @@ namespace project
     public class DataProvider
     {
 
-        SqlConnection connection = new SqlConnection();
+        SqlConnection connection=null;// = new SqlConnection();
         public DataProvider()
         {
             try
             {
-                connection.ConnectionString = @"Data Source=DESKTOP-60UEF3K\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
+                //connection.ConnectionString = @"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
+                connection = new SqlConnection(@"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True");
                 connection.Open();
             }
             catch { }
@@ -497,7 +498,7 @@ namespace project
             connection.Close();
         }
 
-        // Phương thức để tải lịch sử đặt bàn
+        // Phương thức để tải lịch sử đặt bàn+
         public DataTable LoadBookingHistory()
         {
             DataTable data = new DataTable();
@@ -505,6 +506,33 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_load_booking_history";
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
+            return data;
+        }
+        public void SaveBill(string name,int count,string price,DateTime time)
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_save_bill2";
+           // command.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = ;
+            command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
+            command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
+            command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;
+            command.Parameters.AddWithValue("@TimePay", SqlDbType.DateTime).Value = time;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public DataTable LoadBill()
+        {
+            DataTable data = new DataTable();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_loaded_bill";
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);
             connection.Close();
