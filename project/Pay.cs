@@ -73,10 +73,20 @@ namespace project
             {
                 //Tih tien
                 DataProvider provider = new DataProvider();
-                //DataTable table = provider.loadBillWhere(txtNameTable.Text);
-                //provider = new DataProvider();
-                ////provider.SaveBill(table.Rows[0][2].ToString(),int.Parse(table.Rows[0][3].ToString()), txtTotal.Text, DateTime.Now); 
-                provider.SaveBill("cafe",1, txtTotal.Text, DateTime.Now); 
+                DataTable table = provider.loadBillWhere(txtNameTable.Text);
+                string listFood="";
+                int count=0;
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    listFood +=table.Rows[i][2].ToString()+", ";
+                    string k = table.Rows[i][3].ToString();
+                    int h = int.Parse(k);
+                    count += h;
+                }
+                //MessageBox.Show("Cac loai food: " + listFood + "\t" + " so luong food" + count);
+                provider = new DataProvider();
+                provider.SaveBill(listFood,count,txtTotal.Text, DateTime.Now); 
+                 
                 setTableNull();
                 deleteBill();
                 provider = new DataProvider();

@@ -493,7 +493,7 @@ namespace project
             command.CommandText = "sp_book_table";
             command.Parameters.AddWithValue("@TableName", SqlDbType.NVarChar).Value = tableName;
             command.Parameters.AddWithValue("@TotalAmount", SqlDbType.NVarChar).Value = totalMoney;
-            command.Parameters.AddWithValue("@BookingTime", SqlDbType.DateTime).Value = bookingTime;
+            //command.Parameters.AddWithValue("@BookingTime", SqlDbType.DateTime).Value = bookingTime;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -516,7 +516,7 @@ namespace project
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "sp_save_bill";     
+            command.CommandText = "sp_save_bill";
             command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
             command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
             command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;

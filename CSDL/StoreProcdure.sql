@@ -340,6 +340,7 @@ BEGIN
 	SELECT * FROM BOOKINGHISTORY
 END
 
+GO
 CREATE PROCEDURE sp_save_bill
 @FoodName nvarchar(50),
 @CountFood int,
@@ -347,7 +348,7 @@ CREATE PROCEDURE sp_save_bill
 @TimePay datetime
 AS
 BEGIN
-	INSERT INTO BILLMANAGER (FoodName, CountFood, PriceBill,TimePay) VALUES (@FoodName, @CountFood, @PriceBill,@TimePay)
+	INSERT INTO BILLMANAGER (FoodName, CountFood, PriceBill, TimePay) VALUES (@FoodName, @CountFood, @PriceBill, @TimePay)
 END
 
 
@@ -356,3 +357,4 @@ AS
 BEGIN
 	SELECT * FROM BILLMANAGER
 END
+
