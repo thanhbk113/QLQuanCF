@@ -20,10 +20,11 @@ namespace project
             //Đặt tên cho các header của DataGridView
 
          
-            dataGridListBill.Columns[0].HeaderText = "Tên Mon";
-            dataGridListBill.Columns[1].HeaderText = "So Luong";
-            dataGridListBill.Columns[2].HeaderText = "Tổng Tiền";
-            dataGridListBill.Columns[3].HeaderText = "Thời gian";
+            dataGridListBill.Columns[0].HeaderText = "Bill ID";
+            dataGridListBill.Columns[1].HeaderText = "Tên Mon";
+            dataGridListBill.Columns[2].HeaderText = "So Luong";
+            dataGridListBill.Columns[3].HeaderText = "Tổng Tiền";
+            dataGridListBill.Columns[4].HeaderText = "Thời gian";
         }
 
         private void frmBillManager_Load(object sender, EventArgs e)
