@@ -516,8 +516,7 @@ namespace project
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "sp_save_bill2";
-           // command.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = ;
+            command.CommandText = "sp_save_bill";     
             command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
             command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
             command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;

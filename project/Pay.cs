@@ -73,10 +73,10 @@ namespace project
             {
                 //Tih tien
                 DataProvider provider = new DataProvider();
-                DataTable table = provider.loadBillWhere(txtNameTable.Text);
-                provider = new DataProvider();
-                provider.SaveBill(table.Rows[0][2].ToString(),int.Parse(table.Rows[0][3].ToString()), txtTotal.Text, DateTime.Now); 
-                //provider.SaveBill("cafe",1, txtTotal.Text, DateTime.Now); 
+                //DataTable table = provider.loadBillWhere(txtNameTable.Text);
+                //provider = new DataProvider();
+                ////provider.SaveBill(table.Rows[0][2].ToString(),int.Parse(table.Rows[0][3].ToString()), txtTotal.Text, DateTime.Now); 
+                provider.SaveBill("cafe",1, txtTotal.Text, DateTime.Now); 
                 setTableNull();
                 deleteBill();
                 provider = new DataProvider();
