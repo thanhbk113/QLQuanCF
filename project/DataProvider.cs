@@ -11,13 +11,13 @@ namespace project
     public class DataProvider
     {
 
-        SqlConnection connection=null;// = new SqlConnection();
+        SqlConnection connection= new SqlConnection();
         public DataProvider()
         {
             try
             {
-                //connection.ConnectionString = @"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
-                connection = new SqlConnection(@"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True");
+                connection.ConnectionString = @"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
+                //connection = new SqlConnection(@"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True");
                 connection.Open();
             }
             catch { }
@@ -515,12 +515,20 @@ namespace project
         {
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "sp_save_bill";
+            //command.CommandType = CommandType.StoredProcedure;
+            //command.CommandText = "sp_save_bill";
+            //command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
+            //command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
+            //command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;
+            //command.Parameters.AddWithValue("@TimePay", SqlDbType.DateTime).Value = time;
+
+
+            command.CommandText = "insert into BILLMANAGER (FoodName, CountFood, PriceBill, TimePay) values (@FoodName, @CountFood, @PriceBill, @TimePay)";
             command.Parameters.AddWithValue("@FoodName", SqlDbType.NVarChar).Value = name;
             command.Parameters.AddWithValue("@CountFood", SqlDbType.Int).Value = count;
             command.Parameters.AddWithValue("@PriceBill", SqlDbType.NVarChar).Value = price;
             command.Parameters.AddWithValue("@TimePay", SqlDbType.DateTime).Value = time;
+
             command.ExecuteNonQuery();
             connection.Close();
         }
