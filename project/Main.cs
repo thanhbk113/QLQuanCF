@@ -481,8 +481,8 @@ namespace project
         {
             try
             {
-                printDialog1.Document = printDocument1;
-                if (printDialog1.ShowDialog() == DialogResult.OK)
+                printPreviewDialog1.Document = printDocument1;
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
                 {
                     printDocument1.Print();
                 }
@@ -645,6 +645,20 @@ namespace project
         {
             frmBillManager frmBillManager = new frmBillManager();
             frmBillManager.ShowDialog();
+            this.Show();
+        }
+
+        private void tmiAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void tmtThongKe_Click(object sender, EventArgs e)
+        {
+            frmReport frmReport = new frmReport();
+            frmReport.ShowDialog();
             this.Show();
         }
 

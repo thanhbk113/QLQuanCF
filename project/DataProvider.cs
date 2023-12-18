@@ -20,7 +20,7 @@ namespace project
             {
                 //connection.ConnectionString = @"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";nhon
                 //connection = new SqlConnection(@"Data Source=DESKTOP-0V56VRT\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True");nhon
-                connection.ConnectionString = @"Data Source=DESKTOP-60UEF3K\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
+                connection.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QL_QUANCAFE;Integrated Security=True";
                 connection.Open();
             }
             catch { }
