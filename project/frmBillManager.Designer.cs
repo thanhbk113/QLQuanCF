@@ -37,11 +37,12 @@
             // 
             this.dataGridListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListBill.Location = new System.Drawing.Point(16, 15);
-            this.dataGridListBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridListBill.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridListBill.Name = "dataGridListBill";
             this.dataGridListBill.RowHeadersWidth = 51;
             this.dataGridListBill.Size = new System.Drawing.Size(743, 510);
             this.dataGridListBill.TabIndex = 0;
+            this.dataGridListBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListBill_CellContentClick);
             // 
             // frmBillManager
             // 
@@ -50,7 +51,7 @@
             this.ClientSize = new System.Drawing.Size(772, 554);
             this.Controls.Add(this.dataGridListBill);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBillManager";
             this.Text = "Danh sach hoa don";
             this.Load += new System.EventHandler(this.frmBillManager_Load);

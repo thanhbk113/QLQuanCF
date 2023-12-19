@@ -5,14 +5,18 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
+
 
 namespace project
 {
     public class DataProvider
     {
 
-        //SqlConnection connection=null;// = new SqlConnection(); //nhon
-        SqlConnection connection = new SqlConnection();
+
+    //SqlConnection connection=null;// = new SqlConnection(); //nhon
+    SqlConnection connection = new SqlConnection();
 
         public DataProvider()
         {
@@ -526,6 +530,21 @@ namespace project
             command.Parameters.AddWithValue("@TimePay", SqlDbType.DateTime).Value = time;
             command.ExecuteNonQuery();
             connection.Close();
+        }
+
+        public DataTable SaveThongKe(DateTime startDay, DateTime endDay)
+        {
+            DataTable data = new DataTable();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_filtered_bill";
+            command.Parameters.AddWithValue("@StartDate", SqlDbType.Date).Value = startDay;
+            command.Parameters.AddWithValue("@EndDate", SqlDbType.Date).Value = endDay;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
+            return data;
         }
 
         public DataTable LoadBill()

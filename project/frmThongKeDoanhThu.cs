@@ -31,7 +31,17 @@ namespace project
         private void button1_Click(object sender, EventArgs e)
         {
             // code nút Thống Kê tại đây:
+            DataProvider dataProvider = new DataProvider();
+            
+            dataGridView3.DataSource = dataProvider.SaveThongKe(DateTime.Parse(mtbTuNgay.Text), DateTime.Parse(mtbToiNgay.Text));
+            //Đặt tên cho các header của DataGridView
 
+
+            dataGridView3.Columns[0].HeaderText = "Bill ID";
+            dataGridView3.Columns[1].HeaderText = "Tên Mon";
+            dataGridView3.Columns[2].HeaderText = "So Luong";
+            dataGridView3.Columns[3].HeaderText = "Tổng Tiền";
+            dataGridView3.Columns[4].HeaderText = "Thời gian";
         }
 
         private void label1_Click_2(object sender, EventArgs e)

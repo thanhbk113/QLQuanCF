@@ -31,5 +31,10 @@ namespace project
         {
 
         }
+
+        private void dataGridListBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
