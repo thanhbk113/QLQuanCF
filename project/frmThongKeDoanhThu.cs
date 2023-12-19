@@ -32,6 +32,10 @@ namespace project
         {
             // code nút Thống Kê tại đây:
             DataProvider dataProvider = new DataProvider();
+
+            mtbTuNgay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
+            mtbToiNgay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
+
             
             dataGridView3.DataSource = dataProvider.SaveThongKe(DateTime.Parse(mtbTuNgay.Text), DateTime.Parse(mtbToiNgay.Text));
             //Đặt tên cho các header của DataGridView
